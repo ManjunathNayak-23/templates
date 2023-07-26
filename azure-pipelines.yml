@@ -14,7 +14,7 @@ resources:
   repositories:
     - repository: helpers
       type: github
-      name: templates
+      name: ManjunathNayak-23/templates
       endpoint: test-github
       
 steps:
