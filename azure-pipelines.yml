@@ -14,6 +14,7 @@ resources:
   repositories:
     - repository: helpers
       type: git
+      name: templates
 steps:
   - template: username.yml@helpers
     parameters:
