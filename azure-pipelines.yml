@@ -15,6 +15,7 @@ resources:
     - repository: helpers
       type: git
       name: templates
+      endpoint: https://github.com/ManjunathNayak-23/templates.git
 steps:
   - template: username.yml@helpers
     parameters:
