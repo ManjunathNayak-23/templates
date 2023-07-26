@@ -1,0 +1,5 @@
+parameters:
+    - name: username
+      default: ''
+steps:
+- bash: echo "Hi ${{parameters.username}}"
