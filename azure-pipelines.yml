@@ -13,7 +13,7 @@ pool:
 resources:
   repositories:
     - repository: helpers
-      type: git
+      type: github
       name: templates
       endpoint: github.com_ManjunathNayak-23
       
