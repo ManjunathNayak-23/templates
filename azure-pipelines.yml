@@ -20,3 +20,9 @@ steps:
 - script: |
     cat $(pemkey.secureFilePath)
 
+- task: SSH@0
+  inputs:
+    sshEndpoint: 'bastin'
+    runOptions: 'inline'
+    inline: 'ssh -i $(pemkey.secureFilePath) azureuser@10.0.0.5 ls - ltr'
+    readyTimeout: '20000'
