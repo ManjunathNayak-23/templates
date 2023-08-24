@@ -17,8 +17,6 @@ steps:
   displayName: 'Download CA certificate'
   inputs:
     secureFile: 'dotnet-app_key.pem'
+- script: |
+    echo key is $(pemkey.secureFilePath)
 
-- task: Bash@3
-  inputs:
-    targetType: 'inline'
-    script: 'echo $(pemkey.secureFilePath)'
