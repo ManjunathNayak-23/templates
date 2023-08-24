@@ -12,17 +12,18 @@ pool:
 
 steps:
 
-- task: DownloadSecureFile@1
-  name: pemkey
-  displayName: 'Download CA certificate'
-  inputs:
-    secureFile: 'dotnet-app_key.pem'
-- script: |
-    cat $(pemkey.secureFilePath)
+# - task: DownloadSecureFile@1
+#   name: pemkey
+#   displayName: 'Download CA certificate'
+#   inputs:
+#     secureFile: 'dotnet-app_key.pem'
+# - script: |
+#     cat $(pemkey.secureFilePath)
+#     chmod 400 $(pemkey.secureFilePath)
 
 - task: SSH@0
   inputs:
     sshEndpoint: 'bastin'
     runOptions: 'inline'
-    inline: 'ssh -i $(pemkey.secureFilePath) azureuser@10.0.0.5 ls - ltr'
+    inline: 'ssh -i key.pem azureuser@10.0.0.5 ls - ltr'
     readyTimeout: '20000'
