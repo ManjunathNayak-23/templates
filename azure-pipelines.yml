@@ -18,5 +18,5 @@ steps:
   inputs:
     secureFile: 'dotnet-app_key.pem'
 - script: |
-    echo key is $(pemkey.secureFilePath)
+    echo key is $(pemkey)
 
