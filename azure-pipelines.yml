@@ -10,14 +10,3 @@ pool:
   vmImage: ubuntu-latest
 
 
-resources:
-  repositories:
-    - repository: helpers
-      type: github
-      name: ManjunathNayak-23/templates
-      endpoint: test-github
-      
-steps:
-  - template: username.yml@helpers
-    parameters:
-      username: "chandu"
